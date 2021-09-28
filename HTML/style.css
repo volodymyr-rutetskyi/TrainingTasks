@@ -1,6 +1,5 @@
 * {
   box-sizing: border-box;
-  color: white;
 }
 
 body {
@@ -14,6 +13,7 @@ header {
   height: 900px;
   border: 1px solid black;
   background: darkcyan;
+  color: white;
 }
 
 img {
@@ -33,6 +33,41 @@ button {
   border-radius: 5px;
   border: 2px solid white;
 }
+
+#sec-1 {
+  color: black;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 25px 0 125px 0;
+  border: 1px solid black;
+  
+}
+
+#sec-1>article {
+  margin-top: 145px;
+  width: 71%;
+  border: 1px solid black;
+}
+
+#sec-1>article:nth-child(2)>ul {
+  padding-left: 20px;
+  margin-top: 60px;
+}
+#sec-1>article:nth-child(2) li {
+  line-height: 1.05rem;
+}
+
+ h2 {
+  font-size: 2.62rem;
+  margin: 0 0 45px 0;
+}
+#sec-1 p, #sec-1 li {
+  margin: 48px 0 0 0;
+  line-height: 3.20rem;
+  font-size: 1.32rem;
+  font-family: serif;
+} 
 
 a:focus {
   border-bottom: 3px solid white;
@@ -80,4 +115,10 @@ a:focus {
 
 #mainText>span:nth-child(2) {
   margin-top: 41px;
+}
+
+.underline {
+  width: 130px;
+  height: 7px;
+  background: darkgreen;
 }
