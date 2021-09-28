@@ -58,7 +58,7 @@ button {
   line-height: 1.05rem;
 }
 
-h2 {
+h3 {
   font-size: 2.62rem;
   margin: 0 0 45px 0;
 }
@@ -111,6 +111,35 @@ h2 {
 
 .image-container>img {
   margin: 0;
+}
+
+#sec-3 {
+  color: black;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+}
+
+.articles {
+  border: 1px solid black;
+  margin: 185px 0 78px 0;
+  width: 71.5%;
+}
+
+article>h2 {
+  font-size: 2.6rem;
+  margin: 0 0 42px 0;
+}
+
+#sec-3 article>h3 {
+  font-size: 2.6rem;
+  margin: 72px 0 50px 0;
+}
+
+p {
+  font-family: serif;
+  line-height: 3.15rem;
+  font-size: 1.35rem;
 }
 
 a:focus {
