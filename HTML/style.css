@@ -118,12 +118,16 @@ h3 {
   border: 1px solid black;
   display: flex;
   justify-content: center;
+  padding-bottom: 115px;
 }
 
 .articles {
   border: 1px solid black;
-  margin: 185px 0 78px 0;
-  width: 71.5%;
+  margin: 185px 0 0 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 article>h2 {
@@ -131,15 +135,65 @@ article>h2 {
   margin: 0 0 42px 0;
 }
 
+#sec-3 article:nth-of-type(1) {
+  padding-bottom: 75px;
+  width: 71.5%;
+}
+
+#sec-3 article:nth-of-type(2) {
+  border: 1px solid black;
+  height: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: lightgray;
+  width: 100%;
+}
+
+#sec-3 article:nth-of-type(3) {
+  width: 71.5%;
+}
+
+#sec-3 .cite-container {
+  border: 1px solid black;
+  height: 120px;
+  width: 71.5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  font-family: serif;
+}
+
+#sec-3 .cite-container>span:nth-of-type(1) {
+  font-size: 1.85rem;
+  line-height: 3rem;
+}
+
+#sec-3 .cite-container>span:nth-of-type(2) {
+  align-self: flex-end;
+  font-size: 1.6rem;
+}
+
 #sec-3 article>h3 {
   font-size: 2.6rem;
   margin: 72px 0 50px 0;
+}
+
+#sec-3 article:last-of-type>h3 {
+  margin: 120px 0 50px 0;
 }
 
 p {
   font-family: serif;
   line-height: 3.15rem;
   font-size: 1.35rem;
+}
+#sec-3 article:last-of-type>p:last-of-type {
+  padding: 30px 60px 0 60px;
+  font-size: 2.32rem;
+  font-family: arial;
+
 }
 
 a:focus {
