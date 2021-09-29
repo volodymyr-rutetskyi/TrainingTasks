@@ -52,12 +52,11 @@ const dog = {
     speak: speak
 }
 
-englishman.speak()
-ukrainian.speak()
-dog.speak()
+// englishman.speak()
+// ukrainian.speak()
+// dog.speak()
 
 // module patters
-
 function BankCard() {
     const owner =  "Volodymyr"
     const bank = "Monobank"
@@ -83,4 +82,7 @@ function BankCard() {
 }
 
 const myBankCard = BankCard()
-console.log(myBankCard)
+
+// data-attributes
+var paragraph = document.getElementById('pg')
+console.log(paragraph.dataset)
