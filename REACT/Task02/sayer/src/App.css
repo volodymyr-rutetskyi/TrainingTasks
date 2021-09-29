@@ -28,6 +28,22 @@
   color: #61dafb;
 }
 
+.App-bg-1 {
+  background: darkcyan;
+}
+
+.App-clr-1 {
+  color: darkcyan
+}
+
+.App-bg-2 {
+  background: palevioletred;
+}
+
+.App-clr-2 {
+  color: palevioletred
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -35,4 +51,12 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+html {
+  font-size: 25px;
+}
+
+* {
+  box-sizing: border-box;
 }

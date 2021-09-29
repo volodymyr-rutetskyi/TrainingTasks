@@ -1,0 +1,28 @@
+#main {
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    color: white;
+    height: 215px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header>div:only-child {
+    height: 60%;
+    width: 87%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.header strong {
+    font-size: 2.75rem;
+}
+
+.header span {
+    font-size: 1rem;
+}

@@ -1,0 +1,20 @@
+.element {
+    height: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid lightgray;
+}
+.element>span {
+    font-size: 1.55rem;
+    margin-left: 35px;
+}
+.notifications {
+    color: white;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+    font-size: 1.5rem;
+    margin-right: 35px;
+}
