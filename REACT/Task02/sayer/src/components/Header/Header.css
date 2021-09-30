@@ -2,7 +2,6 @@
     color: white;
     height: 215px;
     display: flex;
-    align-items: center;
     justify-content: flex-start;
 }
 
@@ -10,6 +9,7 @@
     background:lightseagreen;
     height: 70px;
     width: 70px;
+    min-width: 70px;
     border-radius: 50%;
     line-height: 70px;
     margin: 30px;
@@ -17,4 +17,13 @@
 
 .header>span {
     font-size: 1.6rem;
+    text-align: start;
+}
+
+.children {
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    padding: 40px;
+    text-align: start;
 }

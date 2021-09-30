@@ -46,7 +46,7 @@ function Create(props) {
 
   return (
     <div className="create-view">
-      <Header title="Create new item" />
+      <Header title="Create new item" homeLink={true}/>
       <div style={containerSt}>
         <input
           style={inputSt}

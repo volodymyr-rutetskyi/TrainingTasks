@@ -1,11 +1,18 @@
 import React, { useState } from "react";
+import { useLocation } from "react-router-dom";
 import "./Comments.css";
 import "../../App.css";
+import Header from "../../components/Header"
 
-function Comments() {
+function Comments(props) {
+  const location = useLocation()
+
+
 
   return (
-      <h1>Comments PAGE</h1>
+      <div>
+        <Header homeLink={true} title={location.state.title}/>
+      </div>
   );
 }
 
