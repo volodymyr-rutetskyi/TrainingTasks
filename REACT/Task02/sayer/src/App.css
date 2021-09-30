@@ -2,6 +2,8 @@
   text-align: center;
   width: 640px;
   align-self: center;
+  height: 100vh;
+  border: 1px solid darkcyan;
 }
 
 .App-logo {
@@ -65,5 +67,5 @@ html {
 
 a {
   color: white;
-  text-decoration: none;
+  text-decoration: none; 
 }

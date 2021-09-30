@@ -9,7 +9,7 @@ function Element(props) {
     history.push({
       pathname: '/comments',
       state: {
-        title: props.title, comments: []
+        title: props.element.title, comments: [...props.element.comments]
       }
     })
   }
@@ -23,7 +23,7 @@ function Element(props) {
       onMouseEnter={() => setDeleteBtnState(true)}
       onClick={() => seeComments()}
     >
-      <span className="App-clr-1">{props.title}</span>
+      <span className="App-clr-1">{props.element.title}</span>
       {deleteBtnState ? (
         <button
           className="delete-btn App-bg-2"
@@ -31,11 +31,12 @@ function Element(props) {
         >
           Delete
         </button>
-      ) : (
+      ) : props.element.comments.length > 0 && (
         <div className="notifications App-bg-1">
-          <span>5</span>
+          <span>{props.element.comments.length}</span>
         </div>
-      )}
+      )
+      }
     </div>
   );
 }

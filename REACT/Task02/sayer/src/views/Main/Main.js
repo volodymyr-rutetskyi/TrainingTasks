@@ -21,7 +21,7 @@ function Main(props) {
       </Header>
       {props.elements.length > 0 ? (
         props.elements.map((el) => (
-          <Element title={el} deleteElement={props.deleteElement} />
+          <Element element={el} deleteElement={props.deleteElement} />
         ))
       ) : (
         <h2 className="App-clr-1">No elemnets</h2>
