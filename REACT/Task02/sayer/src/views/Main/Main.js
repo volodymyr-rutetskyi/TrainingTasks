@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import "./Main.css";
 import "../../App.css";
-import Element from "../Element";
-import NewElement from "../NewElement";
+import Element from "../../components/Element";
+import NewElement from "../../components/NewElement";
 
 function Main() {
   const [elements, setElements] = useState([
@@ -13,6 +13,10 @@ function Main() {
 
   function deleteElement(element) {
     setElements(elements.filter((el) => el != element));
+  }
+
+  function addElement(element) {
+    setElements([...elements, element])
   }
 
   return (

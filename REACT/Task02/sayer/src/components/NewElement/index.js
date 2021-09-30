@@ -1,10 +1,11 @@
 import React from "react";
-import "./NewElement.css"
+import "./NewElement.css";
+import { Link } from "react-router-dom";
 
 function NewElement(props) {
   return (
     <div className="new-element App-bg-2">
-      <span>+</span>
+      <Link to="/create">+</Link>
     </div>
   );
 }
