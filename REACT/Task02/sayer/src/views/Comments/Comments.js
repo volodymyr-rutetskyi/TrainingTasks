@@ -14,9 +14,11 @@ function Comments(props) {
       <Header homeLink={true} title={location.state.title} />
       {props.elements
         .filter((el) => el.title === location.state.title)[0]
-        .comments.map((c) => (
-          <Comment comment={c} />
-        ))}
+        .comments.map((c, idx) => {
+          if (idx % 2 == 0) {
+            return <Comment comment={c} />;
+          } else return <Comment comment={c} background="palevioletred" />;
+        })}
       {
         <TextInput
           addComment={props.addComment.bind(null, location.state.title)}

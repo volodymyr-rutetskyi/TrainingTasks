@@ -24,7 +24,7 @@ function Main(props) {
           <Element element={el} deleteElement={props.deleteElement} />
         ))
       ) : (
-        <h2 className="App-clr-1">No elemnets</h2>
+        <h2 className="App-clr-1">No elements</h2>
       )}
       <NewElement />
     </div>

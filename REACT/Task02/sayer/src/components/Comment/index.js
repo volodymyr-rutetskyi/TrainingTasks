@@ -19,7 +19,7 @@ const pSt = {
 function Comment(props) {
   return (
     <div style={commentSt}>
-      <div style={imgSt} className="App-bg-1"></div>
+      <div style={{...imgSt, background: props.background}} className="App-bg-1"></div>
       <p style={pSt}>{props.comment}</p>
     </div>
   );

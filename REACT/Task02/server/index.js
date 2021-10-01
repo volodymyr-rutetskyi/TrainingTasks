@@ -1,19 +1,21 @@
 const express = require("express");
 const app = express();
-const port = 5017;
+const port = 8000;
 const ejf = require('edit-json-file')
 const bodyParser = require('body-parser')
+const cors = require('cors')
 
 const file = ejf('elements.json')
 
-app.use(bodyParser())
+app.use(bodyParser.json())
+app.use(cors())
 
 app.get('/', (req,res) => {
     res.send(elements())
 })
 
 app.put('/comment', (req,res) => {
-    putComment(req.body.title, req.body.comment)
+    putComment(req.body.element, req.body.comment)
     res.send(elements())
 })
 
@@ -23,7 +25,7 @@ app.put('/element', (req,res) => {
 })
 
 app.delete('/element', (req,res) => {
-    deleteElement(req.body.title)
+    deleteElement(req.query.title)
     res.send(elements())
 })
 
@@ -43,7 +45,9 @@ function putElement(element) {
 function putComment(title, comment) {
     const element = elements().find(el => el.title === title)
     element.comments.push(comment)
+    deleteElement(title)
     putElement(element)
+    
 }
 function deleteElement(title) {
     file.set('elements', elements().filter((el) => el.title != title))

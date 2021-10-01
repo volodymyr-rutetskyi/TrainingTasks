@@ -4,42 +4,36 @@ import Main from "./views/Main/Main";
 import Create from "./views/Create/Create";
 import Comments from "./views/Comments/Comments";
 import TextInput from "./components/TextInput";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import axios from 'axios'
+
+const host = "http://localhost:"
+const port = 8000
+
 
 function App() {
-  const [elements, setElements] = useState([
-    {
-      title: "First item with customized long tilde",
-      comments: ["very good!"],
-    },
-    {
-      title: "Second item",
-      comments: ["very good!", "not so good"],
-    },
-    {
-      title: "Third item (short one)",
-      comments: [],
-    },
-  ]);
+  const [elements, setElements] = useState([]);
 
-  function deleteElement(element) {
-    setElements(elements.filter((el) => el != element));
+  async function getElements() {
+    const response = await axios.get(`${host}${port}`)
+    setElements(response.data)
   }
 
-  function addElement(element) {
-    setElements([...elements, element]);
+  async function deleteElement(title) {
+    setElements((await axios.delete(`${host}${port}/element?title=${title}`,)).data);
   }
 
-  function addComment(element, comment) {
-    const newEls = elements.map(el => {
-      if(element === el.title) {
-        el.comments.push(comment)
-        return el
-      }
-      return el
-    })
-    setElements(newEls)
+  async function addElement(element) {
+    setElements((await axios.put(`${host}${port}/element`, element)).data);
   }
+
+  async function addComment(element, comment) {
+    setElements((await axios.put(`${host}${port}/comment`, {element, comment})).data)
+  }
+
+  useEffect(async () => {
+    await getElements()
+  })
 
   return (
     <div className="App">
