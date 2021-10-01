@@ -35,7 +35,7 @@ function Create(props) {
   const [title, setTitle] = React.useState("");
 
   function btnClickHandler() {
-    props.addElement(title)
+    props.addElement({ title, comments: []})
     setTitle("");
     history.push('/main')
   }
