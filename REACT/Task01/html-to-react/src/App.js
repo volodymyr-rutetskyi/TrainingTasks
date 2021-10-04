@@ -1,6 +1,10 @@
 import "./App.css";
 import Header from "./components/Header/index";
 import SectionOne from "./components/SectionOne/index";
+import SectionTwo from "./components/SectionTwo/index";
+import SectionThree from "./components/SectionThree/index";
+import SectionFour from "./components/SectionFour/index";
+import SectionQuote from "./components/SectionQuote/index";
 
 function App() {
   const paragraphs = [
@@ -19,12 +23,28 @@ function App() {
         "Allow native speakers to provide constructive feedback to foster student’s development.",
       ],
     },
+    {
+      title: "DESIGN PROCESS",
+      subtitle: "Research",
+      content: [
+        "This process includes user interviews, competitive analysis, research synthesis, persona development, user stories and determination of the information architecture for the product. Below is a quote from one of our user interviews that encompasses a common sentiment of our users.",
+      ],
+    },{
+      subtitle: "The problem",
+      content: [
+        'After interviewing several language students, we came up with a problem statement that encompasses the key pain point we aimed to solve with design thinking.'
+      ],
+    },  
   ];
 
   return (
     <div className="app">
       <Header />
       <SectionOne paragraphs={paragraphs} />
+      <SectionTwo />
+      <SectionThree paragraphs={paragraphs} />
+      <SectionQuote />
+      <SectionFour paragraphs={paragraphs}/>
     </div>
   );
 }
