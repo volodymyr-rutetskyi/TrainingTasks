@@ -5,6 +5,9 @@ import SectionTwo from "./components/SectionTwo/index";
 import SectionThree from "./components/SectionThree/index";
 import SectionFour from "./components/SectionFour/index";
 import SectionQuote from "./components/SectionQuote/index";
+import SectionFive from "./components/SectionFive/index";
+import SectionPhones from "./components/SectionPhones/index";
+import SectionBottom from "./components/SectionBottom/index";
 
 function App() {
   const paragraphs = [
@@ -34,6 +37,11 @@ function App() {
       content: [
         'After interviewing several language students, we came up with a problem statement that encompasses the key pain point we aimed to solve with design thinking.'
       ],
+    },{
+      subtitle: "Cross platform experience",
+      content: [
+        'In order to make the on-demand learning experience more accessible, we deemed web responsivity to be crucial to our users. This allows students to easily have conversations at any time or on the go.'
+      ],
     },  
   ];
 
@@ -45,6 +53,9 @@ function App() {
       <SectionThree paragraphs={paragraphs} />
       <SectionQuote />
       <SectionFour paragraphs={paragraphs}/>
+      <SectionPhones />
+      <SectionFive paragraphs={paragraphs}/>
+      <SectionBottom />
     </div>
   );
 }
